@@ -16,6 +16,11 @@ body {
   color: #fff;
 }
 
+hr {
+  border-top: 1px solid rgba(0,0,0,.5);
+  border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
 /* ==========================================================================
    Custom Classes
    ========================================================================== */
@@ -186,6 +191,53 @@ span .fa-location-arrow {
   color: #E00049;
 }
 
+/********** Bus Stop List *********/
+
+section.list {
+    position: absolute;
+    margin: 288px auto;
+    width: 95%;
+}
+
+section.list.bdr-lt.bdr-drk.item-2 {
+    position: absolute;
+    top: 6.9em;
+}
+
+.list-item {
+    padding: 20px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+}
+
+ul.stop-list, ul.time-list {
+    height: 4em;
+}
+
+li.list-title, li.list-time {
+    font-size: 2.125em;
+    margin-bottom: 10px;
+}
+
+li.list-detail, li.list-min {
+    font-size: .9375em;
+}
+
+ul.time-list {
+    margin-right: 40px;
+}
+
+span.arrow-right {
+    position: relative;
+    top: -1.1em;
+    left: 0.8em;
+    font-size: 3.125em;
+    color: #1CD9A4;
+}
+
 /*
  ==========================================================================
   CSS iphone Image
@@ -266,13 +318,13 @@ span .fa-location-arrow {
 /********** Phone Screen *********/
 
 .screen {
-	height: 81%;
-	width: 98%;
-	background: #303030;
-	margin: 0 auto;
-	border: 1px solid #272727;
-	position: relative;
-	top: 35px;
+    height: 81%;
+    width: 98%;
+    background: #303030;
+    margin: 0 auto;
+    border: 1px solid #272727;
+    position: relative;
+    top: 35px;
 }
 
 /********** Phone Side Buttons *********/
