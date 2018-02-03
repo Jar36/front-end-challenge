@@ -1,10 +1,3 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -16,276 +9,211 @@ html {
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
+/********** Phone Body *********/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+body {
+  font-family: 'Ubuntu', sans-serif;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+/* main wrapper to center phone body */
+main {
+  height: 867px;
+	width: 423px;
+  margin: 0 auto;
+}
+.iphone-body {
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+	background: #fff;
+	box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3),
+		0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
+	border: 5px solid #f2f2f2;
+	border-radius: 50px;
+	margin: 30px auto;
+	position: relative;
+	/*transform: scale(0.8);*/
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/********** Phone Top *********/
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+.iphone-top {
+	padding: 5px 110px 40px;
+	position: relative;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.top-section .camera {
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 13px;
+	border-radius: 50%;
+	background: #46494c;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.top-section .mic {
+	display: block;
+	width: 70px;
+	height: 6px;
+	margin: 0 auto;
+	border-radius: 8px;
+	background: #46494c;
 }
 
-.clearfix:after {
-    clear: both;
+.top-section .speaker {
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 130px;
+	top: 43px;
+	margin: 0 auto;
+	border-radius: 8px;
+	background: #46494c;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/* Accents on sides of top and bottom of the phone body */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.top-bar,
+.bottom-bar {
+	display: block;
+	position: absolute;
+	width: 423px;
+	height: 15px;
+	border-left: 5px solid #c5c3c6;
+	border-right: 5px solid #c5c3c6;
+	right: -5px;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.top-bar {
+	top: 50px;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.bottom-bar {
+	bottom: 50px;
+}
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+/********** Phone Screen *********/
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+.screen {
+	height: 81%;
+	width: 98%;
+	background: #303030;
+	margin: 0 auto;
+	border: 1px solid #4c5c68;
+	border-radius: 2px;
+	position: relative;
+	top: 35px;
+}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+/********** Phone Screen Content Frontend Challenge *********/
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+nav ul {
+  display: inline;
+}
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+nav ul li {
+  list-style: none;
+  display: inline;
+}
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+#status-bar {
+  height:20px;
+  padding: 0;
+  margin: 0;
+}
 
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+.top-bar-text {
+  color: #fff;
+}
 
-    thead {
-        display: table-header-group;
-    }
+li.time {
+  position: absolute;
+  left: 158px;
+}
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+.fa-xs {
+  color: #fff;
+}
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+/********** Phone Side Buttons *********/
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.buttons .on-off, .buttons .sleep, .buttons .up, .buttons .down {
+	display: block;
+	position: absolute;
+	background: rgba(0,0,0,0.3);
+	border-radius: 2px 0 0 2px;
+}
+
+.buttons .on-off {
+	height: 30px;
+	width: 3px;
+	top: 95px;
+	left: -8px;
+}
+
+.buttons .sleep {
+	height: 45px;
+	width: 3px;
+	top: 160px;
+	transform: rotate(180deg);
+	right: -8px;
+}
+
+.buttons .up {
+	height: 45px;
+	width: 3px;
+	top: 160px;
+	left: -8px;
+}
+
+.buttons .down {
+	height: 45px;
+	width: 3px;
+	top: 215px;
+	left: -8px;
+}
+
+/********** Phone Bottom Button *********/
+
+.iphone-bottom {
+	padding: 50px 0 0;
+}
+.iphone-bottom span {
+	display: block;
+	margin: 0 auto;
+	width: 68px;
+	height: 68px;
+	background: #ccc;
+	border-radius: 50%;
+	background: linear-gradient(
+		135deg, #303233 0%,
+		#b5b7b9 50%,
+		#f0f2f2 69%,
+		#303233 100%
+	);
+	position: relative;
+}
+.iphone-bottom span:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 4px;
+	top: 4px;
 }
