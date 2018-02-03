@@ -1,7 +1,9 @@
 
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Base styles
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu:400,500,700');
 
 html {
     color: #222;
@@ -9,35 +11,197 @@ html {
     line-height: 1.4;
 }
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+}
 
 /* ==========================================================================
-   Author's custom styles
+   Custom Classes
    ========================================================================== */
 
-/********** Phone Body *********/
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
-body {
+/* Text Shadow */
+
+.shadow {
+  text-shadow: 1px 1px 1px rgba(0,0,0,5);
+}
+
+.bdr-lt {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.bdr-drk {
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+/*
+ ==========================================================================
+   Phone Screen Content Frontend Challenge from Design to Code
+   ========================================================================== */
+   main {
+     height: 867px;
+   	width: 423px;
+     margin: 0 auto;
+   }
+
+.container {
+  width: 95%;
+  margin: 5px auto 0 auto;
+}
+
+/********** Top Navigation *********/
+
+nav {
+  background: rgba(0,0,0,.8);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 64px;
+  top:0;
+  left: 0;
+}
+
+nav ul li {
+  display: inline;
+  position: relative;
+  z-index: 1;
+}
+
+#status-bar {
+  height:20px;
+  padding: 0;
+  margin: 0 auto;
+  width: 95%;
+}
+
+li.time, li.percent {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 0px;
+}
+
+li.top-bar-text {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+li.time {
+  left: 114px;
+}
+
+li.percent {
+  left: 228px;
+}
+
+li.right {
+  position: relative;
+  float: right;
+}
+
+.fa-signal:before, .fa-wifi:before, .fa-battery-full:before, .top-bar-text {
+  position: relative;
+  font-size: .65em;
+  color:#fff;
+}
+
+div.nav-bottom {
+  text-align: center;
+  color:#fff;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+span.arrow-left {
+  position: relative;
+  left: -90px;
+  top: 5px;
+  color: #1CD9A4;
+}
+
+/********** Map *********/
+
+section div.map {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:294px;
+  background: url(../img/map.png)no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+/********** Search *********/
+
+.search {
+  position: relative;
+  text-align: center;
+  margin-top: 20%;
+  width: 100%;
+}
+.search input {
+  text-indent: 30px;
+  width:95%;
+  border-radius: 10px;
+  border: none;
+  height: 36px;
+  background: rgba(0,0,0,.80);
+}
+.search .fa-search, .search .fa-microphone {
+  position: absolute;
+  top: 10px;
+  color: #1CD9A4;
+  z-index: 1;
+}
+
+.search .fa-search {
+  left: 18px;
+}
+
+.search .fa-microphone {
+  right: 18px;
+}
+
+input::placeholder {
+  color: #1CD9A4;
   font-family: 'Ubuntu', sans-serif;
 }
 
-/* main wrapper to center phone body */
-main {
-  height: 867px;
-	width: 423px;
-  margin: 0 auto;
+/********** Map Markers *********/
+
+span .fa-map-marker {
+  position: relative;
+  top:60px;
+  left:188px;
+  font-size: 1.5em;
+  color: #E00049;
 }
+
+span .fa-location-arrow {
+  position: relative;
+  top:145px;
+  left:0px;
+  font-size: 1.5em;
+  color: #E00049;
+}
+
+/*
+ ==========================================================================
+  CSS iphone Image
+   ========================================================================== */
+
 .iphone-body {
-	height: 100%;
-	width: 100%;
-	padding: 15px;
-	background: #fff;
-	box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3),
-		0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
-	border: 5px solid #f2f2f2;
-	border-radius: 50px;
-	margin: 30px auto;
-	position: relative;
-	/*transform: scale(0.8);*/
+   height: 100%;
+   width: 100%;
+   padding: 15px;
+   background: #000;
+   box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3), 0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
+   border: 5px solid #46494c;
+   border-radius: 50px;
+   margin: 30px auto;
+   position: relative;
+   /* transform: scale(0.8); */
 }
 
 /********** Phone Top *********/
@@ -81,15 +245,14 @@ main {
 
 /* Accents on sides of top and bottom of the phone body */
 
-.top-bar,
-.bottom-bar {
-	display: block;
-	position: absolute;
-	width: 423px;
-	height: 15px;
-	border-left: 5px solid #c5c3c6;
-	border-right: 5px solid #c5c3c6;
-	right: -5px;
+.top-bar, .bottom-bar {
+  display: block;
+  position: absolute;
+  width: 423px;
+  height: 15px;
+  border-left: 5px solid #303233;
+  border-right: 5px solid #303233;
+  right: -5px;
 }
 
 .top-bar {
@@ -107,45 +270,9 @@ main {
 	width: 98%;
 	background: #303030;
 	margin: 0 auto;
-	border: 1px solid #4c5c68;
-	border-radius: 2px;
+	border: 1px solid #272727;
 	position: relative;
 	top: 35px;
-}
-
-/********** Phone Screen Content Frontend Challenge *********/
-
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
-
-nav ul {
-  display: inline;
-}
-
-nav ul li {
-  list-style: none;
-  display: inline;
-}
-
-#status-bar {
-  height:20px;
-  padding: 0;
-  margin: 0;
-}
-
-.top-bar-text {
-  color: #fff;
-}
-
-li.time {
-  position: absolute;
-  left: 158px;
-}
-
-.fa-xs {
-  color: #fff;
 }
 
 /********** Phone Side Buttons *********/
@@ -192,28 +319,23 @@ li.time {
 	padding: 50px 0 0;
 }
 .iphone-bottom span {
-	display: block;
-	margin: 0 auto;
-	width: 68px;
-	height: 68px;
-	background: #ccc;
-	border-radius: 50%;
-	background: linear-gradient(
-		135deg, #303233 0%,
-		#b5b7b9 50%,
-		#f0f2f2 69%,
-		#303233 100%
-	);
-	position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient( 135deg, #000000 0%, #c1c1c1 50%, #6d6d6d 69%, #000000 100% );
+  position: relative;
 }
+
 .iphone-bottom span:after {
-	content: "";
-	display: block;
-	width: 60px;
-	height: 60px;
-	background: #fff;
-	border-radius: 50%;
-	position: absolute;
-	left: 4px;
-	top: 4px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
 }
