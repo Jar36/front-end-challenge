@@ -220,6 +220,7 @@ ul.stop-list, ul.time-list {
 li.list-title, li.list-time {
     font-size: 2.125em;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 li.list-detail, li.list-min {
