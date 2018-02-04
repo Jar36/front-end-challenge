@@ -12,13 +12,8 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-}
-
-hr {
-  border-top: 1px solid rgba(0,0,0,.5);
-  border-bottom: 1px solid rgba(255,255,255,.3);
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
 }
 
 /* ==========================================================================
@@ -28,113 +23,72 @@ hr {
 /* Text Shadow */
 
 .shadow {
-  text-shadow: 1px 1px 1px rgba(0,0,0,5);
-}
-
-.bdr-lt {
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-.bdr-drk {
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 1px rgba(0,0,0,5);
 }
 
 /*
  ==========================================================================
    Phone Screen Content Frontend Challenge from Design to Code
    ========================================================================== */
-   main {
-     height: 867px;
-   	width: 423px;
-     margin: 0 auto;
-   }
+
+main {
+    height: 867px;
+    width: 423px;
+    margin: 0 auto;
+}
 
 .container {
-  width: 95%;
-  margin: 5px auto 0 auto;
+    width: 100%;
+    margin: 0px auto;
 }
 
 /********** Top Navigation *********/
 
-nav {
-  background: rgba(0,0,0,.8);
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 64px;
-  top:0;
-  left: 0;
-}
-
-nav ul li {
-  display: inline;
-  position: relative;
-  z-index: 1;
+.top-nav-bar {
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    height: 64px;
 }
 
 #status-bar {
-  height:20px;
-  padding: 0;
-  margin: 0 auto;
-  width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width:95%;
+    font-family: 'Roboto', sans-serif;
 }
 
-li.time, li.percent {
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  top: 0px;
-}
-
-li.top-bar-text {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-}
-
-li.time {
-  left: 114px;
-}
-
-li.percent {
-  left: 228px;
-}
-
-li.right {
-  position: relative;
-  float: right;
-}
+#status-bar ul li {
+    display: inline;
+ }
 
 .fa-signal:before, .fa-wifi:before, .fa-battery-full:before, .top-bar-text {
-  position: relative;
-  font-size: .65em;
-  color:#fff;
+    font-size: .65em;
+    color:#fff;
 }
 
-div.nav-bottom {
-  text-align: center;
-  color:#fff;
-  margin: 0 auto;
-  font-weight: bold;
+div#nav-bottom {
+    text-align: center;
+    color:#fff;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 span.arrow-left {
-  position: relative;
-  left: -90px;
-  top: 5px;
-  color: #1CD9A4;
+    position: relative;
+    left: -90px;
+    top: 5px;
+    color: #1CD9A4;
 }
 
 /********** Map *********/
 
 section div.map {
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  width:100%;
-  height:294px;
-  background: url(../img/map.png)no-repeat center center;
-  background-size: cover;
-  z-index: 0;
+    width:100%;
+    height:294px;
+    background: url(../img/map.png)no-repeat center center;
+    background-size: cover;
+    z-index: 0;
 }
 
 /********** Search *********/
@@ -142,13 +96,13 @@ section div.map {
 .search {
   position: relative;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
 }
 .search input {
   text-indent: 30px;
   width:95%;
-  border-radius: 10px;
+  border-radius: 4px;
   border: none;
   height: 36px;
   background: rgba(0,0,0,.80);
@@ -185,7 +139,7 @@ span .fa-map-marker {
 
 span .fa-location-arrow {
   position: relative;
-  top:145px;
+  top:140px;
   left:0px;
   font-size: 1.5em;
   color: #E00049;
@@ -193,28 +147,53 @@ span .fa-location-arrow {
 
 /********** Bus Stop List *********/
 
-section.list {
-    position: absolute;
-    margin: 288px auto;
-    width: 95%;
-}
-
-section.list.bdr-lt.bdr-drk.item-2 {
-    position: absolute;
-    top: 6.9em;
-}
-
 .list-item {
     padding: 20px 0;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
+    border-bottom: .5px solid #00000038;
+    transition: all .3s;
+}
+
+.list-item:hover {
+    background: #4c4c4c;
+    cursor: pointer;
+}
+
+.stop-list {
+    width:50%;
+}
+
+.time-list {
+    width: 40%;
+}
+
+.arrow {
+    width:10%;
+}
+
+ul.time-list {
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+ul.stop-list {
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+li.list-time, li.list-min {
+    text-align: right;
 }
 
 ul.stop-list, ul.time-list {
-    height: 4em;
+    height: 3.5em;
 }
 
 li.list-title, li.list-time {
@@ -227,16 +206,14 @@ li.list-detail, li.list-min {
     font-size: .9375em;
 }
 
-ul.time-list {
-    margin-right: 40px;
-}
-
 span.arrow-right {
-    position: relative;
-    top: -1.1em;
-    left: 0.8em;
     font-size: 3.125em;
     color: #1CD9A4;
+}
+
+#last {
+    position: relative;
+    z-index: 0;
 }
 
 /*
@@ -245,23 +222,23 @@ span.arrow-right {
    ========================================================================== */
 
 .iphone-body {
-   height: 100%;
-   width: 100%;
-   padding: 15px;
-   background: #000;
-   box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3), 0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
-   border: 5px solid #46494c;
-   border-radius: 50px;
-   margin: 30px auto;
-   position: relative;
-   /* transform: scale(0.8); */
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3), 0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
+    border: 5px solid #46494c;
+    border-radius: 50px;
+    margin: 30px auto;
+    position: relative;
+    transform: scale(0.8);
 }
 
 /********** Phone Top *********/
 
 .iphone-top {
-	padding: 5px 110px 40px;
-	position: relative;
+    padding: 5px 110px 40px;
+    position: relative;
 }
 
 .top-section .camera {
@@ -299,13 +276,13 @@ span.arrow-right {
 /* Accents on sides of top and bottom of the phone body */
 
 .top-bar, .bottom-bar {
-  display: block;
-  position: absolute;
-  width: 423px;
-  height: 15px;
-  border-left: 5px solid #303233;
-  border-right: 5px solid #303233;
-  right: -5px;
+    display: block;
+    position: absolute;
+    width: 423px;
+    height: 15px;
+    border-left: 5px solid #303233;
+    border-right: 5px solid #303233;
+    right: -5px;
 }
 
 .top-bar {
@@ -372,23 +349,23 @@ span.arrow-right {
 	padding: 50px 0 0;
 }
 .iphone-bottom span {
-  display: block;
-  margin: 0 auto;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: linear-gradient( 135deg, #000000 0%, #c1c1c1 50%, #6d6d6d 69%, #000000 100% );
-  position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient( 135deg, #000000 0%, #c1c1c1 50%, #6d6d6d 69%, #000000 100% );
+    position: relative;
 }
 
 .iphone-bottom span:after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  background: #222;
-  border-radius: 50%;
-  position: absolute;
-  left: 4px;
-  top: 4px;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
 }
