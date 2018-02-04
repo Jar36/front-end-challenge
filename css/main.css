@@ -106,6 +106,7 @@ section.map {
   border: none;
   height: 36px;
   background: rgba(0,0,0,.80);
+  color: #1CD9A4;
 }
 .search .fa-search, .search .fa-microphone {
   position: absolute;
